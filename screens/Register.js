@@ -12,6 +12,7 @@ import { Block, Checkbox, Text, theme } from "galio-framework";
 import { Button, Icon, Input } from "../components";
 import { Images, argonTheme } from "../constants";
 
+
 const { width, height } = Dimensions.get("screen");
 
 const checkPasswordStrength = (password) => {
@@ -77,6 +78,7 @@ class Register extends React.Component {
   };
 
   render() {
+    const { navigation } = this.props;
     return (
       <Block flex middle>
         <StatusBar hidden />
@@ -200,6 +202,13 @@ class Register extends React.Component {
                         </Text>
                       </Button>
                     </Block>
+                    <Block middle>
+                      <Button color="primary" style={styles.loginButton} onPress={() => navigation.navigate('Login')}>
+                        <Text bold size={14} color={argonTheme.COLORS.WHITE}>
+                          Giriş Yap
+                        </Text>
+                      </Button>
+                    </Block>
                   </KeyboardAvoidingView>
                 </Block>
               </Block>
@@ -261,6 +270,10 @@ const styles = StyleSheet.create({
   createButton: {
     width: width * 0.5,
     marginTop: 25
+  },
+  loginButton: {
+    width: width * 0.5,
+    marginTop: 10
   }
 });
 

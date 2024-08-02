@@ -2,8 +2,11 @@
 const Onboarding = require("../assets/imgs/bg.png");
 const Logo = require("../assets/imgs/argon-logo.png");
 const LogoOnboarding = require("../assets/imgs/argon-logo-onboarding.png");
+const ceketJpg = require("../assets/imgs/Ceket.jpg");
+const back2 = require("../assets/imgs/back2.jpeg");
 const ProfileBackground = require("../assets/imgs/profile-screen-bg.png");
-const RegisterBackground = require("../assets/imgs/register-bg.png");
+const RegisterBackground = require("../assets/imgs/backgif.gif");
+const gameLoader = require("../assets/imgs/gameloader.json");
 const Pro = require("../assets/imgs/getPro-bg.png");
 const ArgonLogo = require("../assets/imgs/argonlogo.png");
 const iOSLogo = require("../assets/imgs/ios.png");
@@ -37,5 +40,7 @@ export default {
   Pro,
   ArgonLogo,
   iOSLogo,
-  androidLogo
+  androidLogo,
+  ceketJpg,
+  gameLoader
 };

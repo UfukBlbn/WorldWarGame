@@ -15,6 +15,8 @@ import Pro from "../screens/Pro";
 import Profile from "../screens/Profile";
 import React from "react";
 import Register from "../screens/Register";
+import Login from "../screens/Login"; 
+import Game from "../screens/Game"; 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -106,7 +108,7 @@ function ArticlesStack(props) {
 function ProfileStack(props) {
   return (
     <Stack.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Login"
       screenOptions={{
         mode: "card",
         headerShown: "screen",
@@ -198,7 +200,7 @@ function HomeStack(props) {
 export default function OnboardingStack(props) {
   return (
     <Stack.Navigator
-      initialRouteName="Account"
+      initialRouteName="Login"
       screenOptions={{
         mode: "card",
         headerShown: false,
@@ -216,6 +218,8 @@ export default function OnboardingStack(props) {
         name="Account"
         component={Register}
       />
+       <Stack.Screen name="Login" component={Login} />
+       <Stack.Screen name="Game" component={Game} />
     </Stack.Navigator>
   );
 }
@@ -229,7 +233,7 @@ function AppStack(props) {
         backgroundColor: "white",
         width: width * 0.8,
       }}
-      drawerContentOptions={{
+      screenOptions={{
         activeTintcolor: "white",
         inactiveTintColor: "#000",
         activeBackgroundColor: "transparent",
